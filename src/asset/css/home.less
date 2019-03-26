@@ -1,16 +1,18 @@
 @topbar-z-index: 30;
 @orange: #FF6700;
+@nav-bg-color: #333;
+@color-black: #333;
+@color-grey: #b0b0b0;
+@color-white-grey: #f5f5f5;
+
 .base-margin {
   margin: 0 0 1em 0; 
 }
 
-
 .site-topbar {
   .base-margin();
-  @nav-bg-color: #333;
-  @nav-color: #b0b0b0;
 
-  background-color: @nav-bg-color;
+  background-color: @color-black;
   position: relative;
   height: 4em;
   line-height: 4em;
@@ -25,7 +27,7 @@
   // }
 
   a {
-    color: @nav-color;
+    color: @color-grey;
     &:hover {
       color: #fff;
     }
@@ -44,14 +46,17 @@
     float: right;
     margin: 0 1em;
     padding: 0 1em;
-    background-color: @nav-bg-color+20;
+    background-color: @color-black+20;
+    position: relative;
     .cart-menu {
       display: none;
+      background-color: @color-black;
       color: #fff;
-      // position: fixed;
-      // top: 40px;
-      // right: 0;
-      z-index: @topbar-z-index +1;
+      position: absolute;
+      width: 200px;
+      top: 51.88;
+      right: 0;
+      z-index: @topbar-z-index +100;
     }
   }
 
@@ -100,4 +105,63 @@
       margin: 0 0;
     }
   }
+}
+
+.home-hero {
+  @hero-height: 21em;
+  
+  position: relative;
+  max-height: @hero-height;
+
+  .home-hero-category {
+    float: left;
+    height: @hero-height;
+    color: #fff;
+    background-color: rgba(0, 0, 0, .6);
+
+    .category-list {
+      ul {
+        margin: 0;
+        padding: 0;
+        li[class="list-item"] {
+          margin-top: 1em;
+          margin-bottom: 1em;
+          padding: .3em;
+          padding-left: 2em;
+          a {
+            color: #fff;
+          }
+          &:hover {
+            background-color: @orange;
+          }
+        }
+      }
+    }
+  }
+
+  .home-hero-slider {
+    float: left;
+    // max-height: @hero-height;
+
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      padding: 0;
+      // height: 200px;
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+
+  .home-hero-sub {
+    float: left;
+  }
+}
+
+.home-main {
+  background-color: @color-white-grey;
 }
