@@ -108,14 +108,14 @@
 }
 
 .home-hero {
-  @hero-height: 21em;
+  // @hero-height: 21em;
   
   position: relative;
-  max-height: @hero-height;
+  // max-height: @hero-height;
 
   .home-hero-category {
     float: left;
-    height: @hero-height;
+    // height: @hero-height;
     color: #fff;
     background-color: rgba(0, 0, 0, .6);
 
@@ -159,9 +159,60 @@
 
   .home-hero-sub {
     float: left;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .channel-list {
+      margin: 1em 0;
+      width: 20%;
+      display: flex;
+      flex-wrap: wrap;
+      .channel-list-item {
+        width: 33.33%;
+        height: 50%;
+        background-color: @color-grey;
+        .item-content {
+          width: 90%;
+          height: 90%;
+          margin: 0 auto;
+          background-color: @orange;
+        }
+      }
+    }
+
+    .hero-sub-item {
+      width: 24%;
+      height: 5em;
+      margin: 1em 0;
+      background-color: @color-grey;
+      &:hover {
+        box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+      }
+    }
   }
 }
 
 .home-main {
   background-color: @color-white-grey;
+
+  .home-main-box {
+    .box-hd {
+      @hd-height: 2em;
+
+      .title {
+        float: left;
+        font-size: normal;
+        font-weight: normal;
+        height: @hd-height;
+        line-height: @hd-height;
+      }
+      .more {
+        float: right;
+        height: @hd-height;
+        line-height: @hd-height;
+      }
+    }
+  }
 }
