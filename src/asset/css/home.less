@@ -9,6 +9,7 @@
   margin: 0 0 1em 0; 
 }
 
+// --- top nav ---
 .site-topbar {
   .base-margin();
 
@@ -18,13 +19,6 @@
   line-height: 4em;
   font-size: .8em;
   z-index: @topbar-z-index;
-
-  // &::before,
-  // &::after {
-  //   content: " ";
-  //   display: block;
-  //   clear: both;
-  // }
 
   a {
     color: @color-grey;
@@ -107,6 +101,7 @@
   }
 }
 
+// --- hero --- 
 .home-hero {
   // @hero-height: 21em;
   
@@ -194,12 +189,14 @@
   }
 }
 
+// --- main ---
 .home-main {
   background-color: @color-white-grey;
 
   .home-main-box {
     .box-hd {
       @hd-height: 2em;
+      text-transform: capitalize;
 
       .title {
         float: left;
@@ -212,6 +209,91 @@
         float: right;
         height: @hd-height;
         line-height: @hd-height;
+      }
+    }
+
+    .box-bd {
+      @bd-height: 31.25em;
+
+      .box-bd-banner {
+        .ad {
+         height: @bd-height;
+         width: 100%;
+        //  margin-right: 1em;
+         background-color: @orange; 
+        }
+      }
+
+      .box-bd-item-list {
+        .item {
+          float: left;
+          width: 30%;
+          margin: 0 auto;
+          height: @bd-height /2;
+          padding: .5% 1.5%;
+          
+          .item-content {
+            width: 100%;
+            height: 100%;
+            background-color: @orange;
+            &:hover {
+              box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .home-main-banner {
+    width: 100%;
+    height: 10em;
+    background-color: @color-black *2;
+  }
+}
+
+// --- footer ---
+.site-footer {
+  color: #424242;
+
+  .footer-service {
+    text-align: center;
+    padding: 1.5em 0;
+    border-bottom: 1px solid @color-grey;
+    .list-service {
+      display: flex;
+      justify-content: space-around;
+      li {
+        width: 100%;
+        border-right: 1px solid @color-grey;
+        &:last-child {
+          border-right: none;
+        }
+      }
+    }
+  }
+
+  .footer-links {
+    display: flex;
+    justify-content: space-between;
+    margin: 1em 0;
+
+    .col-links {
+      width: 25%;
+      dt {
+        margin: .5em 0 1em 0;
+      }
+      dd {
+        margin: .5em 0 .5em 0;
+        font-size: .8em;
+      }
+    }
+    .col-contact {
+      width: 25%;
+      text-align: center;
+      .contact-phone {
+        color: @orange;
+        font-size: 1.5em;
       }
     }
   }
