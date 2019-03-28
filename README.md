@@ -4,7 +4,7 @@ A e-commerce  page demo.
 
 Practicing pure HTML, CSS and JavaScript, by constructing a e-commerce web page.
 
-Study and imitate from [Xiaomi](www.mi.com).
+Study and imitate from [Xiaomi](https://www.mi.com).
 
 ## usage
 
