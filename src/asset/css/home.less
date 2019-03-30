@@ -103,16 +103,13 @@
 
 // --- hero --- 
 .home-hero {
-  // @hero-height: 21em;
-  
   position: relative;
-  // max-height: @hero-height;
 
   .home-hero-category {
     float: left;
-    // height: @hero-height;
     color: #fff;
     background-color: rgba(0, 0, 0, .6);
+    position: relative;
 
     .category-list {
       ul {
@@ -126,21 +123,39 @@
           a {
             color: #fff;
           }
+          .list-children {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            color: #000;
+            background-color: #fff;
+            width: calc(100% * 4);
+            height: 100%;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+          }
           &:hover {
             background-color: @orange;
-          }
-          .list-item-children {
-            // -------- unfinished ----------
-            position: absolute;
-            top: 1.3em;
-            left: 0;
-            background-color: @orange;
-            width: 200px;
-            height: 200px;
+            .list-children {
+              display: block;
+            }
           }
         }
       }
     }
+    // .category-list-children {
+    //   .list-children {
+    //     display: none;
+    //     position: absolute;
+    //     top: 0;
+    //     left: 100%;
+    //     color: #000;
+    //     background-color: #fff;
+    //     width: calc(100% * 4);
+    //     height: 100%;
+    //     box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    //   }
+    // }
   }
 
   .home-hero-slider {
